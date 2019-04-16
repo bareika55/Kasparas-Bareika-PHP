@@ -1,2 +1,2 @@
-<?php print 'veikia';
+<?php print 'Laba diena'; ?>
 
