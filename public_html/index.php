@@ -12,7 +12,7 @@ date_default_timezone_set('Europe/Vilnius');
         <h1><?php // Dainų tekstai ?></h1>
         <h2><?php // Dainų tekstai ?></h2>
         <p><?php // Aš toks vienišas jaunas paragrafas... ?></p>
-        <p><?php // Mindau svetimo kodo gatves ?></p>
+<!--        <p><?php // Mindau svetimo kodo gatves ?></p>-->
     </body>
 </html>
 
