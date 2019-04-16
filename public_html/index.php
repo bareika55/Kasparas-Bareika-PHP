@@ -1,12 +1,18 @@
 <!DOCTYPE html>
+<?php 
+
+date_default_timezone_set('Europe/Vilnius');
+?>
 <html>
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
-        <title><?php print 'PHP lydės' . strtotime ('+20 hours'); ?></title>
-    </head>
-    <body>
-        <h1>Kasparas - PHP su manim buvo ir <?php print strtotime('-1 hour') . 'valandą'; ?></h1>
-        <p>Sekantys metai <?php print strtotime('next year'); ?></p>
+        <title><?php // Komentarai ?> </title> 
+    </head> 
+    <body> 
+        <h1><?php // Dainų tekstai ?></h1>
+        <h2><?php // Dainų tekstai ?></h2>
+        <p><?php // Aš toks vienišas jaunas paragrafas... ?></p>
+        <p><?php // Mindau svetimo kodo gatves ?></p>
     </body>
 </html>
 
