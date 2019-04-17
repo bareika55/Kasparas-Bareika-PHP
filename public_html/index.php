@@ -1,10 +1,8 @@
 <?php
 
-$pinigas_1 = rand(1, 100);
-$pinigas_2 = rand(101, 200);
-$pinigas_3 = rand(201, 300);
-$pinigas_4 = rand(301, 400);
-$pinigas_5 = rand(401, 500);
+$siukslines_turis = 50; //(dm3)
+$siuksliu_turis_avg_per_day = 12;
+$max_kaupo_turis = rand(12, 50);
 
 ?>
 
@@ -15,20 +13,13 @@ $pinigas_5 = rand(401, 500);
         <title>PHP lydės ir</title> 
     </head>
     <body>
-        <div class="body1">
-            <h1>
-                Skolos skaičiuoklė
-            </h1>
-            <h3>
-                jei paemėi <?php print $pinigas_1;?>eurų
-            </h3>
-            <h3>
-                Su dviem kabančiais grąžinsi <?php print $pinigas_2;?>
-            </h3>
-            <h3>
-                Su vienu kabančiu grąžinsi <?php print $pinigas_3;?>
-            </h3>            
-        </div>
+        <h1>Po kelių dienų kils barnis?</h1>
+        <p>
+            Po <?php
+            print $siukslines_turis / $siuksliu_turis_avg_per_day;
+            ?> 
+            dienų pirk gėlių ir šampano, jeigu nori, kad žmona šiukšles pati išneštų
+        </p>
     </body>
 </html>
 
