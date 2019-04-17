@@ -1,28 +1,34 @@
-<?php 
-$img = 'media/bomba.gif';
+<?php
+
+$pinigas_1 = rand(1, 100);
+$pinigas_2 = rand(101, 200);
+$pinigas_3 = rand(201, 300);
+$pinigas_4 = rand(301, 400);
+$pinigas_5 = rand(401, 500);
+
 ?>
+
 <!DOCTYPE html>
 <html>
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
-        <title>PHP lydės ir<?php print" ".rand(2019, 2029)." - ".rand(1, 12)." - ".rand(1, 31); ?> </title> 
+        <title>PHP lydės ir</title> 
     </head>
-    <body style="background-color: <?php echo $color;?> ">
-                <?php $string = "sveiki aš storas";
-                  $integer = 122;
-                  $float = 12.44777e4;
-                  $boolean = true;
-                  $array = ['2', '5', 'R', 'K', 'D'];
-                  $nothing = null;
-                  print "String: $string <br>";
-                  print "Float: $float <br>";
-                  print "Boolean: $boolean <br>";
-                  print "Nothing: $nothing";   
-            ?>
-                <img src="<?php print $img;?>">
-                <img src="<?php print $img;?>">
-                <img src="<?php print $img;?>">
-                <img src="<?php print $img;?>">
+    <body>
+        <div class="body1">
+            <h1>
+                Skolos skaičiuoklė
+            </h1>
+            <h3>
+                jei paemėi <?php print $pinigas_1;?>eurų
+            </h3>
+            <h3>
+                Su dviem kabančiais grąžinsi <?php print $pinigas_2;?>
+            </h3>
+            <h3>
+                Su vienu kabančiu grąžinsi <?php print $pinigas_3;?>
+            </h3>            
+        </div>
     </body>
 </html>
 
