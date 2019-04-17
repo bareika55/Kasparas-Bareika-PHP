@@ -34,13 +34,18 @@ $randomFont = array_shift($fonts);
         <title>PHP lydės ir<?php print" ".rand(2019, 2029)." - ".rand(1, 12)." - ".rand(1, 31); ?> </title> 
     </head>
     <body style="background-color: <?php echo $color;?> ">
-        <h1>Kasparas-Galbūt turėsiu <?php print  rand (1, 5); ?> vaikų/us!</h1>
-            <img src="https://media1.tenor.com/images/9cd39f6103e2a6cad13a8a54b4e1ad99/tenor.gif?itemid=8777247" alt="microsoftlogo" style="height:400px;">
-            <p style="color:teal;">D.Trumpas nebebus prezidentu <?php print date(rand(2021, 2031)) . date(' M-d'); ?>.</p>
-            <img src="https://media0.giphy.com/media/xTiTnHXbRoaZ1B1Mo8/giphy.gif" alt="trumpas">
-            <h1 style="font-size: <?php print rand(5, 78) . 'px'; ?>">Aš keičiu savo dydį</h1>
-            <p style="color:rgb(<?php print rand(000, 255) . ', ' . rand(000, 255) . ', ' . rand(000, 255);?>)">Aš keičiu savo spalvą</p>
-            <img src="media/<?php print rand(1, 6);?>.png">
+            <p><?php $string = "sveiki aš storas";
+                  $integer = 122;
+                  $float = 12.44777e4;
+                  $boolean = true;
+                  $array = ['2', '5', 'R', 'K', 'D'];
+                  $null = "sdasd";
+                  print "String: $string <br>";
+                  print "Float: $float <br>";
+                  print "Boolean: $boolean <br>";
+                 
+            ?>
+            </p>
      </body>
 </html>
 
