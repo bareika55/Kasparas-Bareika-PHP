@@ -1,17 +1,17 @@
 <?php
 
-    $grizai_velai = rand(0,1);
-    $grizai_isgeres = rand(0, 1);
+$grizai_velai = rand(0,1);
+$grizai_isgeres = rand(0, 1);
 
-    if ($grizai_isgeres === $grizai_velai){
+if ($grizai_isgeres === $grizai_velai){
         $text = 'miegosi ant sofos';
-    } elseif (!$grizai_velai) {
+} elseif (!$grizai_velai) {
         $text = 'Nemiegam ant sofos, jeigu grįžau nė vėlai';
-    } elseif (!$grizai_isgeres){
+} elseif (!$grizai_isgeres){
         $text = 'Nemiegosi ant sofos jei grįžau blaivas';
-    } else {
+} else {
         $text = 'Nepisk iš namų ne alkaše';
-    }
+}
 ?>
 <!DOCTYPE html>
 <html>
