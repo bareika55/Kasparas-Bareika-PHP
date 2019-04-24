@@ -1,27 +1,38 @@
 <?php
 
-$grizai_velai = rand(0,1);
-$grizai_isgeres = rand(0, 1);
+$grikiai_start = 5000; //Gramai
+$grikiai_remaining = $grikiai_start;
+$days = 0;
 
-if ($grizai_isgeres === $grizai_velai){
-        $text = 'miegosi ant sofos';
-} elseif (!$grizai_velai) {
-        $text = 'Nemiegam ant sofos, jeigu grįžau nė vėlai';
-} elseif (!$grizai_isgeres){
-        $text = 'Nemiegosi ant sofos jei grįžau blaivas';
-} else {
-        $text = 'Nepisk iš namų ne alkaše';
+
+for (; $grikiai_remaining > 0;) {
+    $grikiai_remaining -= rand(200, 500);
+    $days++;
+
+
+
 }
+
+$data = date("Y-M-d", strtotime("+$days days"));
+
+$text = "Jei turėsiu $grikiai_start gramų grikių, galėsiu juos valgyt $days dienų. Jei pradėsiu šiandien,
+grikiai baigsis $data";
+
 ?>
-<!DOCTYPE html>
+
+<!doctype html>
 <html>
-    <head>
-        <meta charset="UTF-8">
-    </head>
-    <body>
-    <img src="https://media1.giphy.com/media/9JOMxLFjCWWSk/giphy.gif" style="height: 200px;" alt="mašina">
-       <h1>
-        <?php print $text; ?>
-       </h1>
-    </body>
+<head>
+    <meta charset="UTF-8"
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="includes/grid.css">
+    <link rel="stylesheet" href="includes/normalize.css">
+    <title>Puslapio pavadinimas</title>
+</head>
+<body>
+     <h1><?php print $text; ?></h1>
+</body>
 </html>
+
