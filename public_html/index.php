@@ -1,13 +1,24 @@
 <?php
 
-$produktai2 = ['Kiaušiniai', 'baklažanas,', 'grietinės indelis'];
-$kiek_dydis = [
-        'dydis' => 'didelis', 'mažas',
-        'kiekis' => 'vienas', 'du'
-
+$array = [
+        'Petras Piziokas' => [
+                'name' => 'Petras Pizdžiokas',
+                'condition' => 'prapistas',
+                'item' => 'Telefonas'
+],
+    'Adomas Abraomas' => [
+            'name' => 'Adomas Ablomas',
+            'condition' => 'Naudojimas',
+            'item' => 'buljonas',
+],
+    'Ana Shitkova' => [
+            'name' => 'Ana Šitkova',
+            'condition' => 'pasibaigęs',
+            'item' => 'rulonas',
+],
 ];
 
-var_dump($produktai2, $kiek_dydis[0]);
+var_dump($array);
 
 ?>
 
@@ -23,6 +34,7 @@ var_dump($produktai2, $kiek_dydis[0]);
         <title>Puslapio pavadinimas</title>
     </head>
     <body>
+    <img src="http://3.bp.blogspot.com/-6ZsyitckH4g/VR2h3dRDzXI/AAAAAAAAAkM/GYMPOYGjc04/s1600/15549_638741939589553_2113540796558574343_n.jpg" alt="as">
     </body>
 </html>
 
