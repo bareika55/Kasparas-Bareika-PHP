@@ -1,20 +1,14 @@
 <?php
 
-$produktai = [
-    'milk_products' => [
-        'name' => 'kiaušiniai', 'jogurtas', 'pienas', 'kefyras',
-        'amount' => 1, 2, 3],
-    'fish' => [
-        'name' => 'žuvis',
-        'amount' => 1, 2, 3],
-    'drinks' => [
-        'name' => 'degtinė',
-        'amount' => 1, 2, 3],
-    'padažai' => [
-        'name' => 'kečiupas', 'grietinė',
-        'amount' => 1, 2, 3],
+$first_stage = [
+        'name' => 'kiaušiniai', 'grietinė', 'jogurtas', 'žuvis',
+        'amount' => 1, 2, 3,
 ];
-var_dump($produktai);
+$second_stage = [
+        'name' => 'pienas', 'kefyras', 'degtinė', 'kepučas',
+        'amount' => 1, 2, 3,
+];
+var_dump($first_stage, $second_stage);
 
 ?>
 
