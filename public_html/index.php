@@ -1,14 +1,9 @@
 <?php
 
-$first_stage = [
-        'name' => 'kiaušiniai', 'grietinė', 'jogurtas', 'žuvis',
-        'amount' => 1, 2, 3,
-];
-$second_stage = [
-        'name' => 'pienas', 'kefyras', 'degtinė', 'kepučas',
-        'amount' => 1, 2, 3,
-];
-var_dump($first_stage, $second_stage);
+$array = ['seskutis', ' ', 'bebriukas', ' ', 'dariukas'];
+foreach ($array as $value){
+    print $value;
+}
 
 ?>
 
