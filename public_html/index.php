@@ -1,12 +1,13 @@
 <?php
 
-$dideli_produktai = [
-        'kiausiniai' => 'Du dideli kiaušiniai',
-        'grietine' => 'didelis grietinės indelis'
-];
-$mazi_produktai = ['baklažanas'];
+$produktai2 = ['Kiaušiniai', 'baklažanas,', 'grietinės indelis'];
+$kiek_dydis = [
+        'dydis' => 'didelis', 'mažas',
+        'kiekis' => 'vienas', 'du'
 
-var_dump($dideli_produktai,$mazi_produktai);
+];
+
+var_dump($produktai2, $kiek_dydis[0]);
 
 ?>
 
