@@ -1,24 +1,11 @@
 <?php
 
-$grikiai_start = 5000; //Gramai
-$grikiai_remaining = $grikiai_start;
-$days = 0;
+$vaisiai = ['obuoliai', 'apelsinai', 'cukinija'
 
-
-for (; $grikiai_remaining > 0;) {
-    $grikiai_remaining -= rand(200, 500);
-    $days++;
-
-
-
-}
-
-$data = date("Y-M-d", strtotime("+$days days"));
-
-$text = "Jei turėsiu $grikiai_start gramų grikių, galėsiu juos valgyt $days dienų. Jei pradėsiu šiandien,
-grikiai baigsis $data";
-
+];
+var_dump($vaisiai);
 ?>
+
 
 <!doctype html>
 <html>
@@ -32,7 +19,6 @@ grikiai baigsis $data";
     <title>Puslapio pavadinimas</title>
 </head>
 <body>
-     <h1><?php print $text; ?></h1>
 </body>
 </html>
 
