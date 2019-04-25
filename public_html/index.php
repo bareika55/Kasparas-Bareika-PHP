@@ -1,9 +1,10 @@
 <?php
 
-$array = ['seskutis', ' ', 'bebriukas', ' ', 'dariukas'];
+$array = [20, 48, 45, 37, 48];
 foreach ($array as $value){
-    print $value;
+
 }
+print array_sum($array);
 
 ?>
 
