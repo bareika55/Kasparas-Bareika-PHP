@@ -1,24 +1,20 @@
 <?php
 
-$array = [
-        'Petras Piziokas' => [
-                'name' => 'Petras Pizdžiokas',
-                'condition' => 'prapistas',
-                'item' => 'Telefonas'
-],
-    'Adomas Abraomas' => [
-            'name' => 'Adomas Ablomas',
-            'condition' => 'Naudojimas',
-            'item' => 'buljonas',
-],
-    'Ana Shitkova' => [
-            'name' => 'Ana Šitkova',
-            'condition' => 'pasibaigęs',
-            'item' => 'rulonas',
-],
+$produktai = [
+    'milk_products' => [
+        'name' => 'kiaušiniai', 'jogurtas', 'pienas', 'kefyras',
+        'amount' => 1, 2, 3],
+    'fish' => [
+        'name' => 'žuvis',
+        'amount' => 1, 2, 3],
+    'drinks' => [
+        'name' => 'degtinė',
+        'amount' => 1, 2, 3],
+    'padažai' => [
+        'name' => 'kečiupas', 'grietinė',
+        'amount' => 1, 2, 3],
 ];
-
-var_dump($array);
+var_dump($produktai);
 
 ?>
 
