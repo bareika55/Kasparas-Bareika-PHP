@@ -1,74 +1,70 @@
 <?php
 
-$ataskaita = [
-    [
-     'name' => 'Rimi darbo užmokestis',
-    'amount' => 800,
-    ],
-    [
-      'name' => 'Traukinio bilietas',
-      'amount' => -10,
-    ],
-    [
-        'name' => 'Čili pica',
-        'amount' => -25,
-    ],
-    [
-        'name' => 'Dviračio remontas',
-        'amount'=> -115,
-    ],
+$gerimai = [
+        [
+        'name' => 'Vilkmergės alus',
+        'price' => 1.89,
+        'nuolaida' => 0 // Nuolaida procentais %
+        ],
+        [
+        'name' => 'Coca-Cola',
+        'price' => 2.59,
+        'nuolaida' => 20 // Nuolaida procentais %
+        ],
+        [
+        'name' => 'Švyturio gintarinis',
+        'price' => 1.45,
+        'nuolaida' => 5 // Nuolaida procentais %
+        ],
+        [
+        'name' => 'Absolut degtinė',
+        'price' => 13.99,
+        'nuolaida' => 7 // Nuolaida procentais %
+        ],
 ];
-$visos_islaidos = 0;
-$visos_iplaukos = 0;
-$balansas = 0;
 
-foreach ($ataskaita as $key => $irasas) {
-    if ($irasas['amount'] > 0) {
-        $visos_iplaukos += $irasas['amount'];
-        $css_class = 'positive';
+foreach ($gerimai as $key => $gerimas) {
+    if ($gerimas['nuolaida'] > 0){
+        $gerimai[$key]['css_class'] = 'Taikoma_nuolaida';
+        $price_with_discount = $gerimas['price'] * (100 - $gerimas['nuolaida']) / 100;
+        $gerimai[$key]['price_with_discount'] = $price_with_discount;
     } else {
-        $visos_islaidos -= $irasas['amount'];
-        $css_class = 'negative';
+        $gerimai[$key]['css_class'] = "Nuolaida_netaikoma";
     }
+    
 }
 
-    $balansas += $irasas['amount'];
-
-    $text = "Balansas: $balansas Eur";
-    $text2 = "Visos išlaidos: $visos_islaidos Eur";
-    $text3 = "Visos įplaukos: $visos_iplaukos Eur";
-
 ?>
-
-<!doctype html>
+<!DOCTYPE html>
 <html>
-<head>
-    <style>
-    .positive {
-        color: green;
-    }
-
-    .negative {
+<style>
+    .Taikoma_nuolaida {
+        font-size: 38px;
         color: red;
     }
-    </style>
-    <meta charset="UTF-8">
-    <meta name="viewport"
-          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Pirmadienis (array)</title>
-</head>
-<body>
-    <ul>
-        <?php foreach ($ataskaita as $irasas): ?>
-        <li class="<?php $irasas['css_class']; ?>">
-            <span><?php print $irasas['name']; ?></span>
-            <span><?php print $irasas['amount']; ?></span>
-        </li>
-        <?php endforeach; ?>
-    </ul>
-    <p><?php print $text; ?> </p>
-    <p><?php print $text2; ?> </p>
-    <p><?php print $text3; ?> </p>
-</body>
+    .Nuolaida_netaikoma {
+        font-size: 20px;
+    }
+    .Taikoma_nuolaida .price {
+        text-decoration-line: line-through;
+    }
+</style>
+    <head>
+        <title>Ataskaita</title>
+        <meta charset="utf-8">
+        <link rel="stylesheet" type="text_balance/css" href="style.css">
+    </head>
+    <body>
+        <ul>
+            <?php foreach ($gerimai as $key => $gerimas): ?>
+            <li class="<?php print $gerimas['css_class']; ?>">
+                <span><?php print $gerimas['name']; ?></span>
+                <?php if (isset($gerimas['price_with_discount'])): ?>
+                <span><?php print $gerimas['price_with_discount']; ?></span>
+                <?php endif ;?>
+                <span class="price"><?php print $gerimas['price']; ?></span>
+            </li>
+            <?php endforeach; ?>
+        </ul>
+    </body>
 </html>
