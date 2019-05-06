@@ -1,32 +1,29 @@
 <?php
 
-function arrayView ($array_key, $color_key){
+$merginos = [
+    [
+        'vardas' => 'Monika',
+        'grazi' => true,
+        'protinga' => false,
+    ],
+    [
+        'vardas' => 'Kotryna',
+        'grazi' => true,
+        'protinga' => true,
+    ],
+    [
+        'vardas' => 'Migle',
+        'grazi' => true,
+        'protinga' => false,
+    ],
+    [
+        'vardas' => 'Laura',
+        'grazi' => true,
+        'protinga' => false,
+    ],
+];
+var_dump($merginos);
 
-    $array = [
-        'labas',
-        'krabas',
-        'kalmaras',
-        'storas'
-    ];
-    $color = [
-        'black',
-        'red',
-        'white',
-        'blue',
-        'green',
-        'yellow'
-    ];
-
-    foreach ($array as $key => $value){
-        $tekstas = $array[$array_key];
-    }
-
-    foreach ($color as $key => $value){
-        $spalva = $color[$color_key];
-    }
-    return $tekstas . ' ' . $spalva;
-}
-print arrayView(3, 3);
 ?>
 <html>
 <head>
