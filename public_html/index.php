@@ -12,21 +12,85 @@ $merginos = [
         'protinga' => true,
     ],
     [
-        'vardas' => 'Migle',
+        'vardas' => 'Agne',
+        'grazi' => false,
+        'protinga' => true,
+    ],
+    [
+        'vardas' => 'Dominyka',
         'grazi' => true,
+        'protinga' => true,
+    ],
+    [
+        'vardas' => 'Migle',
+        'grazi' => false,
         'protinga' => false,
     ],
     [
         'vardas' => 'Laura',
         'grazi' => true,
-        'protinga' => false,
+        'protinga' => true,
     ],
 ];
-var_dump($merginos);
 
+function grazios_merginos ($pretty_girls){
+    $kiek = 0;
+    foreach ($pretty_girls as $grazios){
+        if ($grazios['grazi']){
+           $kiek++;
+        }
+    }
+}
+function vardai ($names){
+    // Random merginų vardai, $names yra paimtas iš $merginos array'ėjaus.
+
+    return $names[rand(0, count($names) - 1)]['vardas'];
+}
+
+function merginos($wives){
+    $isrinktosios = [];
+
+    foreach ($wives as $mergina){
+
+        if ($mergina['grazi'] && $mergina['protinga']){
+            $isrinktosios[] = $mergina['vardas'];
+        }
+    }
+
+    return $isrinktosios;
+}
+
+$isrinktosios_merginos = merginos($merginos);
+$random_mergina = vardai($merginos);
 ?>
 <html>
 <head>
+    <style>
+        .pavadinimas {
+            border: 1px solid black;
+        }
+
+        .aprasymas {
+            border: 1px solid black;
+        }
+
+        .kaina {
+            border: 1px solid black;
+        }
+
+        .nuolaida {
+            border: 1px solid black;
+        }
+
+        .produktas {
+            border: 1px solid black;
+            width: 120px;
+            background-color: #7825FF;
+            height: 60px;
+            display: inline-block;
+            margin: 5px 5px;
+        }
+    </style>
     <meta charset="UTF-8">
     <link rel="stylesheet" href="includes/style.css">
     <link rel="stylesheet" href="includes/normalize.css">
@@ -38,6 +102,19 @@ var_dump($merginos);
 
 </head>
 <body>
-
+    <div class="produktas">
+        <span class="pavadinimas">
+            Aloha
+        </span>
+        <span class="kaina">
+            25 litai
+        </span>
+        <span class="aprasymas">
+            Mažas bet nespalvotas
+        </span>
+        <span class="nuolaida">
+            10%
+        </span>
+    </div>
 </body>
 </html>
