@@ -1,8 +1,9 @@
 <?php
 
-$roll_joints = true;
-$joint1 = &$roll_joints;
-$joint2 = &$joint1;
-$joint3 = &$joint2;
+$sheep = ['bleeedee KURWA'];
 
-print $joint1 . '<br>' .  $joint2 . '<br>' . $joint3;
+for ($x = 0; $x < 5; $x++) {
+    $sheep[] = &$sheep[$x];
+}
+
+var_dump($sheep);
