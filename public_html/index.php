@@ -1,32 +1,44 @@
 <?php
 
-$skaicius = 0;
+$sertifikatas = $_POST['sertifikatas'];
+$atsakymas = '';
 
-if (!empty($_POST)) {
-    $skaicius = $_POST['action'];
-    $skaicius++;
+if (isset($_POST['action'])) {
+    $atsakymas = $_POST['action'];
 } else {
-    $skaicius = 0;
+    print 'Užpildyk laukelius';
 }
 
- 
-var_dump($_POST);
 ?>
+<!DOCTYPE html>
 <html>
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport"
-          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
+    <title>Kazkas bl</title>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="includes/style.css">
 </head>
 <body>
-<form method="post">
-    <button name="action" value="<?php print $skaicius; ?>"><?php print $skaicius; ?></button>
-    <input type="reset" name="reset" value="Reset">
-    <?php for ($x = 0; $x < $skaicius; $x++): ?>
-        <img src="https://steemitimages.com/0x0/https://steemitimages.com/DQmXrkRgqnACmZijfxPgUV7XjWthvg1u6PNoXxbtua5YcpB/AW371921_16.gif" width="150px">
-    <?php endfor; ?>
-</form>
+<form action="index.php" method="post">
+    <label>
+        <input type="text" name="vardas" placeholder="Vardas" required>
+        <input type="text" name="pavarde" placeholder="Pavardė" required>
+        <input type="number" name="amzius" min="1" max="99" placeholder="Amžius">
+        <select name="sertifikatas">
+            <option value="Pradedantysis" selected>Pradedantysis</option>
+            <option value="Pažengęs">Pažengęs</option>
+            <option value="Profesionalas">Profesionalas</option>
+        </select>
+        <button name="action" value="submit">Send</button>
+    </label>
+    <ul>
+        <li>
+            <h1>Tavo vardas:</h1><span><?php print $_POST['vardas']; ?></span>
+            <h1>Tavo pavardė:</h1><span><?php print $_POST['pavarde']; ?></span>
+            <h1>Tavo amžius:</h1> <span><?php print $_POST['amzius']; ?></span>
+            <h1>Tavo IT lygis:</h1> <span><?php print $sertifikatas; ?></span>
+        </li>
+    </ul>
+
 </body>
 </html>
+
